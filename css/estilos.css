@@ -1,0 +1,145 @@
+/*Media Query para celulares*/
+@media (max-width:899px) {
+
+}
+
+/*Media Query para Desktop*/
+@media (min-width: 900px) {
+  header{
+    margin-top: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: #5B7989;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+  }
+
+    #titulo{
+      float: left;
+      margin-top: -5px;
+      margin-left: 10px;
+      height: 100%;
+      text-shadow: 2px 2px 2px #02010a;
+    }
+
+    nav {
+      float: right;
+      margin-top: 10px;
+      margin-right: 10px;
+      height: 100%;
+      font-size: 1.3em;
+    }
+    ul{
+      list-style-type: none;
+      margin: 0 5px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    li{
+      float: right;
+      display: block;
+      margin: 0px 15px;
+      padding: 15px 0px;
+      height: 100%;
+      text-decoration: underline;
+    }
+    li:first-child{
+      text-decoration: none;
+    }
+
+    .bloqueSecundario figure{
+      flex: 1 2 40%;
+    }
+
+}
+
+body{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 90%;
+  background-color: #02010a;
+  font-family: "Dancing Script", cursive;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+}
+
+.bloqueCentral{
+  width: 100%;
+  margin-top: -16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #82c3a6;
+
+}
+
+.bloqueCentral figure img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px black);
+  transform: scale(0.9);
+}
+
+.bloqueSecundario{
+  width: 100%;
+  margin-top: -16px;
+  border: 1px;
+  background-color: #d5c75f;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.img1{
+  order: 1;
+}
+.img1 img{
+  -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  transition: transform 1s;
+}
+.img1 img:hover{
+  transform: rotate(10deg);
+}
+.img2{
+  order: 2;
+}
+.img2 img{
+  -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  transition: transform 1s;
+}
+.img2 img:hover{
+  transform: translate(20px, -5px);
+}
+
+.bloqueSecundario a{
+  font-size: 1.4em;
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+}
+
+.bloqueSecundario figure img{
+  width: 100%;
+}
+
+footer{
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0px;
+  background-color: #C6d5c5;
+  position: relative;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+}
