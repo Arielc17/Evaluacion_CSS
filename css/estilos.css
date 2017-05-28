@@ -1,4 +1,21 @@
-/*Media Query para celulares*/
+
+/* Animacion del Header*/
+@keyframes entrada {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+header{
+  animation: entrada 1.5s;
+}
+
+/*---------Media Query para celulares---------*/
 @media (max-width:899px) {
 
   #contenido{
@@ -42,9 +59,20 @@
   footer div{
     flex: 1 2 100%;
   }
+
+  .galeria{
+    display: flex;
+    flex-direction: column;
+  }
+  .galeria figure{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 2 2 80%;
+  }
 }
 
-/*Media Query para Desktop*/
+/*---------Media Query para Desktop---------*/
 @media (min-width: 900px) {
   #contenido{
     margin-left: auto;
@@ -91,6 +119,13 @@
     footer div{
       flex: 4 2 20%;
     }
+    .galeria{
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .galeria figure{
+      flex: 1 2 20%;
+    }
 }
 
 body{
@@ -124,7 +159,7 @@ header nav h4{
   text-decoration: underline;
   flex: 1 2 30%;
 }
-header nav h4:first-child{
+.selecionado{
   text-decoration: none;
 }
 header a{
@@ -160,24 +195,24 @@ header a{
   text-align: center;
 }
 
-.img1{
+.imgPaisaje{
   order: 1;
 }
-.img1 img{
+.imgPaisaje img{
   transition: transform 1s;
 }
-.img1 img:hover{
+.imgPaisaje img:hover{
   -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
   filter: drop-shadow(2px 2px 2px #82c3a6);
   transform: rotate(10deg);
 }
-.img2{
+.imgRetrato{
   order: 2;
 }
-.img2 img{
+.imgRetrato img{
   transition: transform 1s;
 }
-.img2 img:hover{
+.imgRetrato img:hover{
   -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
   filter: drop-shadow(2px 2px 2px #82c3a6);
   transform: translate(20px, -5px);
@@ -219,4 +254,26 @@ footer h3{
   margin-right: auto;
   font-weight: bold;
   font-size: 1.3em;
+}
+
+.galeria{
+  width: 100%;
+  margin-top: -16px;
+  margin-bottom: 0;
+  border: 1px;
+  background-color: #d5c75f;
+}
+
+.galeria figure img{
+  width: 100%;
+}
+
+.imagen1{
+  filter: blur(10px);
+}
+.galeria figure:nth-child(even){
+  filter: grayscale(100%);
+}
+.imagen3{
+  filter: sepia(90%);
 }
